@@ -34,7 +34,7 @@ export default{
 }
 
 .item.theme-skills{
-  background-image: url("pattern_128bw.png");
+  background-image: url("/docs/assets/images/pattern_128bw.png");
   background-position: -64px -64px, 0 0;
   animation: animatedBackground 5s linear infinite;
 
@@ -70,7 +70,7 @@ i {
 
 .item.theme-hmo{
   background-color: #a6aaad;
-  background-image: url("hmo.jpg");
+  background-image: url("/docs/assets/images/hmo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
