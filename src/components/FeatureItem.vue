@@ -1,6 +1,6 @@
 <template>
-  <div class="item" :class="reversed ? 'reversed' : ''">
-    <div class="container-gradient" v-if="reversed"></div>
+  <div class="item" :class="theme ? ['themed', 'theme-' + theme] : ''">
+    <slot name="pre-item"></slot>
     <div class="meta">
       <div>
         <h3>
@@ -16,7 +16,7 @@
 
 <script>
 export default{
-  props: ["reversed"]
+  props: ["reversed", "theme"]
 }
 </script>
 
@@ -33,10 +33,12 @@ export default{
   min-height: 33vh;
 }
 
-.item:not(.reversed){
+.item.theme-skills{
   background-image: url("pattern_128bw.png");
   background-position: -64px -64px, 0 0;
   animation: animatedBackground 5s linear infinite;
+
+  background-attachment: fixed;
 }
 
 .meta {
@@ -44,13 +46,6 @@ export default{
   display: flex;
   justify-content: center;
   z-index: 1;
-}
-
-.info{
-  max-width: 46rem;
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 1px solid black;
-  padding: 4px;
 }
 
 i {
@@ -63,16 +58,6 @@ i {
   color: var(--color-text);
 }
 
-h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: var(--color-heading);
-  background-color: #434240;
-  background: linear-gradient(180deg, #434240, #0f1012);
-  color: white;
-  border-radius: 6px;
-}
 
 .image {
   flex: 1 1 100%;
@@ -83,13 +68,19 @@ h3 {
   height: auto;
 }
 
-.item.reversed{
+.item.theme-hmo{
   background-color: #a6aaad;
   background-image: url("hmo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   background-attachment: fixed;
+}
+
+.item.theme-showcase{
+  background: #8e9eab;  /* fallback for old browsers */
+  background: rgb(238,242,243);
+  background: radial-gradient(circle, rgba(238,242,243,1) 50%, rgba(142,158,171,1) 100%);
 }
 
 @media (min-width: 1024px) {
@@ -144,6 +135,16 @@ h3 {
   .item.reversed{
     flex-direction: row-reverse;
   }
+
+  .item.theme-hmo{
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 1023px) {
+  .item{
+    min-height: 100vh;
+  }
 }
 
 @keyframes animatedBackground {
@@ -154,15 +155,5 @@ h3 {
     to {
         background-position: 64px 64px, 128px 128px;
     }
-}
-
-.container-gradient{
-  background: linear-gradient(180deg, #a6aaad, transparent);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-.container-gradient::after{
-  content: ' ';
 }
 </style>

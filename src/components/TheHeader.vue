@@ -68,7 +68,8 @@ export default {
 }
 
 .container-gradient{
-    background: linear-gradient(180deg, transparent, #a6aaad);
+    /* background: linear-gradient(180deg, transparent, #a6aaad); */
+    background: linear-gradient(180deg, transparent, #8eafe4);
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -78,7 +79,7 @@ export default {
 .container h1 {
     flex: 1 1 100%;
     text-align: center;
-    font-weight: bolder;
+    font-weight: 900;
     font-size: 4em;
 }
 
