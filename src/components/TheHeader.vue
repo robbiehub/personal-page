@@ -5,6 +5,11 @@
             <h1>Roberto Alcázar</h1>
             <h2 class="regular">Software Developer • <span class="slide-in-top">{{ current_epithet }}</span></h2>
             <h2 class="mobile">Software Developer<br/>•<br/><span class="slide-in-top">{{ current_epithet }}</span></h2>
+            <div class="icon-container">
+                <a href="mailto:luisrob.alcazar@gmail.com"><img class="header-icon" src="iconmonstr-email-10.svg" alt="email icon"/></a>
+                <a href="https://www.linkedin.com/in/roberto-alcazar-abb71aa6/"><img class="header-icon" src="iconmonstr-linkedin-3.svg" alt="linkedin icon" /></a>
+                <a href="https://github.com/robbiehub"><img class="header-icon" src="iconmonstr-github-3.svg" alt="github icon" /></a>
+            </div>
         </div>
         
     </div>
@@ -76,6 +81,10 @@ export default {
     /* opacity: 25%; */
 }
 
+.container *:not(.container-gradient){
+    z-index: 1;
+}
+
 .container h1 {
     flex: 1 1 100%;
     text-align: center;
@@ -89,6 +98,17 @@ h2.regular{
 
 h2.mobile{
     text-align: center;
+}
+
+.icon-container{
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-icon{
+    width: 3em;
+    margin-right: 8px;
 }
 
 @keyframes gradient {

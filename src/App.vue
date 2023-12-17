@@ -14,6 +14,14 @@ import TheHeader from './components/TheHeader.vue'
   <main>
     <TheFeatures />
   </main>
+
+  <footer>
+    <div>
+      <p>Hermosillo photo provided by <a href="https://es.wikipedia.org/wiki/Archivo:Vista_HMO.jpg">Wikipedia</a></p>
+      <p>Icons provided by <a href="https://iconmonstr.com/">iconmonstr</a></p>
+      <p></p>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -25,5 +33,11 @@ header {
 }
 
 main{
+}
+
+footer{
+  background-color: #111111;
+  color: white;
+  padding: 8px;
 }
 </style>
