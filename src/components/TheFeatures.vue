@@ -40,7 +40,7 @@
                 <div class="info-gradient">
                     A growth rate and maximum stat calculator for Fire Emblem Fates
                     <p>Made with <span class="skill">Vue</span></p>
-                    <img class="project-img" src="fates.png" alt="Snapshot of the Fire Emblem Fates Calculator">
+                    <img class="project-img" src="/fates.png" alt="Snapshot of the Fire Emblem Fates Calculator">
                 </div>
             </div>
         </div>
