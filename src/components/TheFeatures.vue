@@ -27,6 +27,7 @@
     <FeatureItem theme="showcase">
         <template #heading><span class="main-header">PERSONAL PROJECTS</span></template>
         <div class="project-showcase">
+            <!-- This page -->
             <div class="project">
                 <h3 class="header-box">This webpage</h3>
                 <div class="info-gradient">
@@ -35,12 +36,24 @@
                 </div>
             </div>
             
+            <!-- FE Fates Calculator -->
             <div class="project">
                 <h3 class="header-box"> <a href="https://robbiehub.github.io/fates-calculator/">Fire Emblem Fates Calculator</a> </h3>
                 <div class="info-gradient">
                     A growth rate and maximum stat calculator for Fire Emblem Fates
                     <p>Made with <span class="skill">Vue</span></p>
-                    <img class="project-img" src="/docs/assets/images/fates.png" alt="Snapshot of the Fire Emblem Fates Calculator">
+                    <a href="https://robbiehub.github.io/fates-calculator/">
+                        <img class="project-img" src="/docs/assets/images/fates.png" alt="Snapshot of the Fire Emblem Fates Calculator">
+                    </a>
+                </div>
+            </div>
+
+            <!-- WAVExtender -->
+            <div class="project">
+                <h3 class="header-box"> <a href="https://github.com/robbiehub/WAVExtender">WAVExtender</a></h3>
+                <div class="info-gradient">
+                    A Python script for extending .wav files with sample chunks
+                    <p>Made with <span class="skill">Python</span></p>
                 </div>
             </div>
         </div>
